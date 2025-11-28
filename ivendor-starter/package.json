@@ -1,0 +1,16 @@
+{
+  "name": "ivendor-starter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start:frontend": "pnpm --filter ./frontend dev",
+    "start:backend": "pnpm --filter ./backend dev",
+    "start:mock": "pnpm --filter ./mock-api dev",
+    "start": "concurrently \"pnpm --filter ./backend dev\" \"pnpm --filter ./frontend dev\" \"pnpm --filter ./mock-api dev\"",
+    "install:all": "pnpm -w install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "pnpm": "^8.0.0"
+  }
+}

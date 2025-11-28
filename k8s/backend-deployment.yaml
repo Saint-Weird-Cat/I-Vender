@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ivendor-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ivendor-backend
+  template:
+    metadata:
+      labels:
+        app: ivendor-backend
+    spec:
+      containers:
+        - name: backend
+          image: ivendor-backend:latest
+          ports:
+            - containerPort: 4000

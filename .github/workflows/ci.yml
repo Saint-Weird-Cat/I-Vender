@@ -1,0 +1,54 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  backend-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install backend deps
+        run: |
+          cd ivendor-starter/backend
+          npm install
+      - name: Run backend tests
+        run: |
+          cd ivendor-starter/backend
+          npm test
+
+  frontend-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install frontend deps
+        run: |
+          cd ivendor-starter/frontend
+          npm install
+      - name: Run frontend tests
+        run: |
+          cd ivendor-starter/frontend
+          npm test -- --run
+
+  frontend-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install frontend deps
+        run: |
+          cd ivendor-starter/frontend
+          npm install
+      - name: Build frontend
+        run: |
+          cd ivendor-starter/frontend
+          npm run build
+
