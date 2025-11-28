@@ -1,0 +1,20 @@
+-- reset drop tables
+DROP TABLE IF EXISTS rewards_transactions;
+DROP TABLE IF EXISTS rewards_wallet;
+DROP TABLE IF EXISTS rbvm_transactions;
+DROP TABLE IF EXISTS cleanliness_reports;
+DROP TABLE IF EXISTS attendance_logs;
+DROP TABLE IF EXISTS commissions;
+DROP TABLE IF EXISTS material_orders;
+DROP TABLE IF EXISTS materials;
+DROP TABLE IF EXISTS material_vendors;
+DROP TABLE IF EXISTS mentor_sessions;
+DROP TABLE IF EXISTS mentors;
+DROP TABLE IF EXISTS milestones;
+DROP TABLE IF EXISTS project_instances;
+DROP TABLE IF EXISTS ideas;
+DROP TABLE IF EXISTS idea_sources;
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS departments;
+DROP TABLE IF EXISTS institutions;
+DROP TABLE IF EXISTS documents;
